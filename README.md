@@ -7,6 +7,23 @@ A Racket to PHP compiler (using PHP Pharen Runtime)
 
 OOP and Namespace integration is different, since `::` and `->` are not supported in Racket.
 
+Prefer using a more let's say pythonic approach here. So instead of having:
+
+```clojure
+(class User
+  (fn my-method (arg)
+    "This method belongs to class 'User'"))
+```
+
+We will actually write:
+
+```racket
+(define (User::my-method self arg) 
+    "This method belongs to class 'User'")
+```
+
+This allows the compiler to keep a consistent *functional* semantic instead of adding extra syntax for method definition.
+
 ##### String concatenation
 
 The string concatenation operator `.` is already used as cons equivalent in Racket. So `'(1 . 2)` is equivalent with `(cons 1 2)`.
