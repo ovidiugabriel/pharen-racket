@@ -33,7 +33,7 @@ This one
 becomes
 
 ```racket
-(User::my-method santa "gifts")
+(% santa my-method "gifts")
 ```
 
 
