@@ -1,6 +1,8 @@
 # pharen-racket
 A Racket to PHP compiler (using PHP Pharen Runtime)
 
+**Note: This is a specification. It is not implemented.**
+
 #### Differences from original "Pharen" language
 
 ##### OOP and Namespace integration
@@ -35,6 +37,14 @@ becomes
 ```racket
 (% santa my-method "gifts")
 ```
+
+This is just a way to avoid writing:
+
+```racket
+(% santa '(my-method "gifts"))
+```
+
+which will work anyway, but the apostrophe is required.
 
 
 ##### String concatenation
