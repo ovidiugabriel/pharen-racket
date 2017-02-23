@@ -46,6 +46,18 @@ This is just a way to avoid writing:
 
 which will work anyway, but the apostrophe is required.
 
+In the same tone. The static method call
+
+```clojure
+(:: Route (get "user/{name}" f))
+```
+
+becomes a simple function call
+
+```racket
+(Route::get "user/{name}" f)
+```
+
 
 ##### String concatenation
 
