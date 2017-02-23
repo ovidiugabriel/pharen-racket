@@ -7,7 +7,7 @@ A Racket to PHP compiler (using PHP Pharen Runtime)
 
 ##### OOP and Namespace integration
 
-Prefer using a more let's say pythonic approach here. So instead of having:
+Prefer using a more let's say pythonic approach here. So for an object method definiton, instead of having:
 
 ```clojure
 (class User
@@ -23,6 +23,8 @@ We will actually write:
 ```
 
 This allows the compiler to keep a consistent *functional* semantic instead of adding extra syntax for method definition.
+
+###### Object method call
 
 OOP and Namespace integration is different, since `::` and `->` are not supported in Racket.
 
@@ -46,7 +48,9 @@ This is just a way to avoid writing:
 
 which will work anyway, but the apostrophe is required.
 
-In the same tone. The static method call
+###### Static method call
+
+In the same idea. The static method call
 
 ```clojure
 (:: Route (get "user/{name}" f))
