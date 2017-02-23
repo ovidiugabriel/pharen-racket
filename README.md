@@ -5,8 +5,6 @@ A Racket to PHP compiler (using PHP Pharen Runtime)
 
 ##### OOP and Namespace integration
 
-OOP and Namespace integration is different, since `::` and `->` are not supported in Racket.
-
 Prefer using a more let's say pythonic approach here. So instead of having:
 
 ```clojure
@@ -23,6 +21,21 @@ We will actually write:
 ```
 
 This allows the compiler to keep a consistent *functional* semantic instead of adding extra syntax for method definition.
+
+OOP and Namespace integration is different, since `::` and `->` are not supported in Racket.
+
+This one
+
+```clojure
+(-> santa (my-method "gifts!"))
+```
+
+becomes
+
+```racket
+(User::my-method santa "gifts")
+```
+
 
 ##### String concatenation
 
