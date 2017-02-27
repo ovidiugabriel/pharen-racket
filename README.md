@@ -30,7 +30,7 @@ This allows the compiler to keep a consistent *functional* semantic instead of a
 
 ###### Object method call
 
-OOP and Namespace integration is different, since `::` and `->` are not supported in Racket.
+OOP and Namespace integration is different, since `::`, `->` or `.` are not supported in Racket.
 
 This one
 
