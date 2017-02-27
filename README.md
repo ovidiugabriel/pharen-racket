@@ -46,7 +46,8 @@ becomes
 
 ###### Static method call
 
-In the same idea. The static method call
+There are no distinguished "static methods". Use "functions" instead of static methods.
+The static method call
 
 ```clojure
 (:: Route (get "user/{name}" f))
