@@ -10,7 +10,7 @@ A Racket to PHP compiler (using PHP Pharen Runtime)
 Prefer using a more let's say pythonic approach here. So for an object method definiton, instead of having:
 
 ```clojure
-(class User
+(class user
   (fn my-method (arg)
     "This method belongs to class 'User'"))
 ```
@@ -18,7 +18,7 @@ Prefer using a more let's say pythonic approach here. So for an object method de
 We will actually write:
 
 ```racket
-(define (User::my-method self arg) 
+(define (user-my-method self arg) 
     "This method belongs to class 'User'")
 ```
 
