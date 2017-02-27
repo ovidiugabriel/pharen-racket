@@ -46,7 +46,6 @@ becomes
 
 ###### Static method call
 
-There are no distinguished "static methods". Use "functions" instead of static methods.
 The static method call
 
 ```clojure
@@ -58,6 +57,8 @@ becomes a simple function call
 ```racket
 (route-get "user/{name}" f)
 ```
+
+This will first try to call `route_get()` if exists, otherwise will try to call `route::get()`.
 
 
 ##### String concatenation
