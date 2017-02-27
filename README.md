@@ -7,6 +7,10 @@ A Racket to PHP compiler (using PHP Pharen Runtime)
 
 ##### OOP and Namespace integration
 
+[Classes and Objects](https://docs.racket-lang.org/guide/classes.html)  in The Racket Guide introduces classes and objects.
+
+But for now ...
+
 Prefer using a more let's say pythonic approach here. So for an object method definiton, instead of having:
 
 ```clojure
