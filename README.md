@@ -41,16 +41,8 @@ This one
 becomes
 
 ```racket
-(% santa my-method "gifts")
+(send santa my-method "gifts")
 ```
-
-This is just a way to avoid writing:
-
-```racket
-(% santa '(my-method "gifts"))
-```
-
-which will work anyway, but the apostrophe is required.
 
 ###### Static method call
 
