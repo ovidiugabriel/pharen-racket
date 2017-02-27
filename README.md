@@ -59,7 +59,7 @@ In the same idea. The static method call
 becomes a simple function call
 
 ```racket
-(Route::get "user/{name}" f)
+(route-get "user/{name}" f)
 ```
 
 
