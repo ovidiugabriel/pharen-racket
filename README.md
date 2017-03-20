@@ -1,4 +1,4 @@
-# pharen-racket
+# pharen-racket (Pharentheses)
 A Racket to PHP compiler (using PHP Pharen Runtime)
 
 **Note: This is a specification. It is not implemented.**
