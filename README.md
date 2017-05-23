@@ -14,6 +14,7 @@ But for now ...
 Prefer using a more let's say pythonic approach here. So for an object method definiton, instead of having:
 
 ```clojure
+;; Original pharen code
 (class user
   (fn my-method (arg)
     "This method belongs to class 'User'"))
@@ -22,6 +23,7 @@ Prefer using a more let's say pythonic approach here. So for an object method de
 We will actually write:
 
 ```racket
+;; racket code
 (define (user-my-method self arg) 
     "This method belongs to class 'User'")
 ```
@@ -35,12 +37,14 @@ OOP and Namespace integration is different, since `::`, `->` or `.` are not supp
 This one
 
 ```clojure
+;; original pharen code
 (-> santa (my-method "gifts!"))
 ```
 
 becomes
 
 ```racket
+;; racket code
 (send santa my-method "gifts")
 ```
 
@@ -66,4 +70,6 @@ This will first try to call `route_get()` if exists, otherwise will try to call 
 The string concatenation operator `.` is already used as cons equivalent in Racket. So `'(1 . 2)` is equivalent with `(cons 1 2)`.
 For this reason the `..` operator will be used instead, which is nothing but an alias for `string-append`.
 
-Please note that in Racket `string-append` joins the strings in the parameters list together, while `string-join` joins the elements of the string list received as the single parameter. A new operator `<>` may be introduced in the near future to allow both signatures.
+Please note that in Racket `string-append` joins the strings in the parameters list together, while `string-join` joins the elements of the string list received as the single parameter. 
+
+A new operator `<>` may be introduced in the near future to allow both signatures. Even if we received some criticism about using operators instead of functions.
