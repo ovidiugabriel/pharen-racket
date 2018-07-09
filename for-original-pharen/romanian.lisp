@@ -1,8 +1,8 @@
 
 ; romanian
 
-(defmacro daca (test-expr then-expr else-expr)
-    '(if ~test-expr ~then-expr ~else-expr)
+(defmacro daca (test-expr then-expr el-expr)
+    '(if ~test-expr ~then-expr ~el-expr)
 )
 
 (defmacro cand (test-expr body)
